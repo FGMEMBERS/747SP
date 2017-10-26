@@ -44,7 +44,7 @@
      <!-- x/y/z == right/up/back -->
      <x-offset-m archive="y">-0.465</x-offset-m>
      <y-offset-m archive="y">3.19</y-offset-m>
-     <z-offset-m archive="y">5.58</z-offset-m>
+     <z-offset-m archive="y">-18.72</z-offset-m>
      <pitch-offset-deg archive="y">-16.0</pitch-offset-deg>         <!-- looks at instruments -->
    </config>
   </view>
@@ -55,8 +55,8 @@
   
 <!-- shift from nose to CG, to make the view natural -->
 
-  <view n="1">
 <!-- put in comment to check that the view really points at the nose -->
+  <!--view n="1">
    <internal archive="y">false</internal>
    <config>
      <target-z-offset-m archive="y">24.3</target-z-offset-m>
@@ -87,9 +87,9 @@
    <config>
      <target-z-offset-m archive="y">24.3</target-z-offset-m>
    </config>
-  </view>
+  </view-->
 
-  <view n="100">                                          <!-- MANDATORY view number -->
+  <view n="105">                                          <!-- MANDATORY view number -->
     <name>Copilot View</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
@@ -112,13 +112,13 @@
       <!-- x/y/z == right/up/back -->
       <x-offset-m archive="y">0.465</x-offset-m>   <!-- symmetry with captain -->
       <y-offset-m archive="y">3.19</y-offset-m>
-      <z-offset-m archive="y">5.38</z-offset-m>
+      <z-offset-m archive="y">-18.92</z-offset-m>
       <pitch-offset-deg archive="y">2.0</pitch-offset-deg> <!-- look the horizon -->
       <heading-offset-deg type="double">286</heading-offset-deg> <!-- inside its windows -->
     </config>
   </view>
 
-  <view>
+  <view n="104">                                          <!-- MANDATORY view number -->
     <name>Engineer View</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
@@ -141,13 +141,13 @@
       <!-- x/y/z == right/up/back -->
       <x-offset-m archive="y">-0.004</x-offset-m>        <!-- the seat rotation axis ! -->
       <y-offset-m archive="y">3.19</y-offset-m>          <!-- like pilot -->
-      <z-offset-m archive="y">6.7</z-offset-m>
+      <z-offset-m archive="y">-17.6</z-offset-m>
       <pitch-offset-deg archive="y">-19.0</pitch-offset-deg>         <!-- looks at fuel -->
       <heading-offset-deg type="double">270</heading-offset-deg>
     </config>
   </view>
 
-  <view>
+  <view n="103">                                          <!-- MANDATORY view number -->
     <name>Observer View</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
@@ -170,13 +170,13 @@
       <!-- x/y/z == right/up/back -->
       <x-offset-m archive="y">-1.04</x-offset-m>
       <y-offset-m archive="y">3.19</y-offset-m>          <!-- like engineer -->
-      <z-offset-m archive="y">6.97</z-offset-m>
+      <z-offset-m archive="y">-17.33</z-offset-m>
       <pitch-offset-deg archive="y">-5</pitch-offset-deg>
       <heading-offset-deg type="double">327</heading-offset-deg>
     </config>
   </view>
 
-  <view>
+  <view n="100">                                          <!-- MANDATORY view number -->
     <name>Gear Well View</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
@@ -199,13 +199,13 @@
      <!-- x/y/z == right/up/back -->
      <x-offset-m archive="y">0.0</x-offset-m>
      <y-offset-m archive="y">-1.0</y-offset-m>
-     <z-offset-m archive="y">32.0</z-offset-m> <!-- inside the gear well -->
+     <z-offset-m archive="y">7.7</z-offset-m> <!-- inside the gear well -->
      <pitch-offset-deg>-10</pitch-offset-deg>
      <heading-offset-deg type="double">90</heading-offset-deg> <!-- looks at gear crossing -->
     </config>
   </view>
 
-  <view>
+  <view n="102">                                          <!-- MANDATORY view number -->
     <name>Cargo Forward View</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
@@ -228,12 +228,12 @@
      <!-- x/y/z == right/up/back -->
      <x-offset-m archive="y">1.0</x-offset-m>
      <y-offset-m archive="y">-1.0</y-offset-m>
-     <z-offset-m archive="y">13</z-offset-m>
+     <z-offset-m archive="y">-11.3</z-offset-m>
      <heading-offset-deg type="double">270</heading-offset-deg> <!-- towards the door -->
     </config>
   </view>
 
-  <view>
+  <view n="101">                                          <!-- MANDATORY view number -->
     <name>Cargo Aft View</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
@@ -256,7 +256,7 @@
      <!-- x/y/z == right/up/back -->
      <x-offset-m archive="y">1.0</x-offset-m>
      <y-offset-m archive="y">-1.0</y-offset-m>
-     <z-offset-m archive="y">47.5</z-offset-m>
+     <z-offset-m archive="y">23.2</z-offset-m>
      <heading-offset-deg type="double">270</heading-offset-deg> <!-- towards the door -->
     </config>
   </view>

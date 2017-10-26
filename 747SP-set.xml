@@ -13,7 +13,7 @@
 		<aircraft-version>0.04</aircraft-version>
 
 		<flight-model>yasim</flight-model>
-		<aero>747SP</aero>
+		<aero>747SP-JT9D</aero>
 
 		<startup>
 			<splash-texture>Aircraft/747SP/splash.png</splash-texture>
@@ -23,6 +23,10 @@
 			<path>Aircraft/747SP/Systems/747SP-systems.xml</path>
 			<autopilot>
 				<path>Aircraft/747SP/Systems/747SP-autopilot.xml</path>
+			</autopilot>
+			<autopilot>
+				<name>Pushback</name>
+				<path>Aircraft/747-8i/Systems/pushback.xml</path>
 			</autopilot>
 			<electrical>
 				<path>Aircraft/Generic/generic-electrical.xml</path>
@@ -56,10 +60,11 @@
 			</wings>
 			<!-- Adiciona o pushback -->
 			<pushback>
-				<kp type="double">100</kp>
-				<ki type="double">25</ki>
+				<kp type="double">-0.05</kp>
 				<kd type="double">0</kd>
-				<position-norm type="double">1</position-norm>
+				<ti type="double">10</ti>
+				<td type="double">0.00001</td>
+				<position-norm type="double">0</position-norm>
 			</pushback>
 		</model>
 
@@ -98,6 +103,18 @@
 			</default>
 		</menubar>
 
+		<weight n="0">
+        	    <name>Crew</name>
+        	    <weight-lb type="double">400</weight-lb>
+        	    <max-lb type="double">600</max-lb>
+        	    <min-lb type="double">300</min-lb>
+        	</weight>
+		<weight n="1">
+		    <name>Pax/Cargo</name>
+		    <weight-lb type="double">60000.0</weight-lb>
+		    <max-lb type="double">84340.0</max-lb>
+		    <min-lb type="double">0.0</min-lb>
+		</weight>
 	</sim>
 
 	<engines>
@@ -119,9 +136,41 @@
 		</engine>
 	</engines>
 
-	<consumables>
-		<fuel include="Systems/747SP-init-fuel.xml"/>
 		<!-- required by nasal -->
+	<!--consumables>
+		<fuel include="Systems/747SP-init-fuel.xml"/>
+	</consumables-->
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name>Center</name>
+				<selected type="bool">1</selected>
+			</tank>
+			<tank n="1">
+				<name>Main #2</name>
+				<selected type="bool">1</selected>
+			</tank>
+			<tank n="2">
+				<name>Main #3</name>
+				<selected type="bool">1</selected>
+			</tank>
+			<tank n="3">
+				<name>Main #1</name>
+				<selected type="bool">1</selected>
+			</tank>
+			<tank n="4">
+				<name>Main #4</name>
+				<selected type="bool">1</selected>
+			</tank>
+			<tank n="5">
+				<name>Res #1</name>
+				<selected type="bool">1</selected>
+			</tank>
+			<tank n="6">
+				<name>Res #4</name>
+				<selected type="bool">1</selected>
+			</tank>
+		</fuel>
 	</consumables>
 
 	<nasal>
@@ -129,7 +178,7 @@
 			<file>Aircraft/747SP/Nasal/747SP-constants.nas</file>
 			<file>Aircraft/747SP/Nasal/747SP-override.nas</file>
 			<file>Aircraft/747SP/Nasal/747SP-instrument.nas</file>
-			<file>Aircraft/747SP/Nasal/747SP-fuel.nas</file>
+			<!--file>Aircraft/747SP/Nasal/747SP-fuel.nas</file-->
 			<file>Aircraft/747SP/Nasal/747SP-autopilot.nas</file>
 			<file>Aircraft/747SP/Nasal/747SP-interface.nas</file>
 			<file>Aircraft/747SP/Nasal/747SP-warning.nas</file>
@@ -232,5 +281,14 @@
 			<heading-bug-deg>273</heading-bug-deg>
 		</settings>
 	</autopilot>
+
+  <limits>
+   <mass-and-balance>
+	<maximum-ramp-mass-lbs>666000</maximum-ramp-mass-lbs>
+	<maximum-takeoff-mass-lbs>660000</maximum-takeoff-mass-lbs>
+	<maximum-landing-mass-lbs>450000</maximum-landing-mass-lbs>
+	<maximum-zero-fuel-mass-lbs>410000</maximum-zero-fuel-mass-lbs>
+   </mass-and-balance>
+  </limits>
 
 </PropertyList>
