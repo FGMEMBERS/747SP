@@ -12,7 +12,7 @@
 		<status>alpha</status>
 		<aircraft-version>0.04</aircraft-version>
 
-		<flight-model>jsb</flight-model>
+		<flight-model>yasim</flight-model>
 		<aero>747SP</aero>
 
 		<startup>
