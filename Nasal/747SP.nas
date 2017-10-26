@@ -78,7 +78,7 @@ BoeingMain.instantiate = func {
    globals.Boeing747.constantaero = ConstantAero.new();
    globals.Boeing747.autopilotsystem = Autopilot.new();
    globals.Boeing747.autothrottlesystem = Autothrottle.new();
-   globals.Boeing747.fuelsystem = Fuel.new();
+#   globals.Boeing747.fuelsystem = Fuel.new();
    globals.Boeing747.flightsystem = Flight.new();
    globals.Boeing747.warningsystem = Warning.new();
 
@@ -86,7 +86,7 @@ BoeingMain.instantiate = func {
    globals.Boeing747.daytimeinstrument = DayTime.new();
 
    globals.Boeing747.doorsystem = Doors.new();
-   globals.Boeing747.seatsystem = Seats.new();
+#   globals.Boeing747.seatsystem = Seats.new();
    globals.Boeing747.menusystem = Menu.new();
 }
 

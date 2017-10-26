@@ -42,11 +42,6 @@
 
  <path>747SP.ac</path>
 
- <offsets>
-   <x-m>24.3</x-m>             <!-- VRP at nose -->
-   <z-m> 0.0</z-m>             <!-- aligned by FDM gear, if model at the scale -->
- </offsets>
- 
 	<!-- Livery System -->
     <nasal>
         <load>
